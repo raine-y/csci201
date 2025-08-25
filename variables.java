@@ -10,4 +10,8 @@ public class variables {
 
 /*
  *  A variable is a name given to a piece of data to call upon it
+ * 
+ * Variable that is primitive contains data
+ * Hexadecimal addresses for var on HEAP
+ * 
  */
