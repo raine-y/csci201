@@ -17,7 +17,7 @@ public class seconds {
         int minutes = Integer.parseInt(timeArray[1]);
         int seconds = Integer.parseInt(timeArray[2]);
         int timeSeconds = (hours * 3600) + (minutes * 60) + seconds;
-        System.out.println(hours + ":" + minutes + ":" + seconds + " = " + timeSeconds + " seconds.");
+        System.out.println(hours + ":" + minutes + ":" + seconds + " = " + timeSeconds + " seconds");
         scanner.close();
     }
 }
