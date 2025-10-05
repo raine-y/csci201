@@ -18,7 +18,9 @@ public class HiLo {
         while (stillPlaying == true) {
             System.out.print("Enter your guess: ");
             int randGuess = scanner.nextInt();
-            scanner.nextLine(); // clear scanner mem..? buffer..? Works...
+            scanner.nextLine(); // clear scanner mem..? buffer..? eat..? eat/
+                                // definitely eat
+                                // ...
             System.out.println("");
             if (randNum != randGuess) {
                 System.out.println("|~ WRONG!!!");
