@@ -51,6 +51,7 @@ public class HiLo {
                     switch (con) {
                         case "c":
                             System.out.println("Starting new game...");
+                            randNum = random.nextInt(100 + 1 - 1) + 1; // ALMOST FORGOT !!! OOPS
                             System.out.println();
                             deciding = false;
                             break;
