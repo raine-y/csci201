@@ -42,7 +42,7 @@ public class HiLo {
                 System.out.println("|~ ");
                 System.out.println("|~ I'll get you next time :|");
                 System.out.println("|~ would you like to try again?");    
-                System.out.println("|~ Hint: enter 'c' to continue and 'q to quit");
+                System.out.println("|~ Hint: enter 'c' to continue and 'q' to quit");
                 System.out.println();
                 System.out.print("Keep playing?: ");
                 boolean deciding = true;
