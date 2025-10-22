@@ -2,8 +2,11 @@ import java.util.Scanner;
 
 public class method {
 
-    final static double PI = Math.PI;
-
+    public static final String YELLOW_BOLD = "\033[1;33m";
+    public static final String YELLOW_UNDERLINED = "\033[4;33m";
+    public static final String RESET = "\033[0m";
+    final static double PI = Math.PI; // Global constants ONLY
+                                      // Don't write spaghetti code
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         hello();
@@ -23,9 +26,8 @@ public class method {
 
     public static void greetUser(String name) {
         System.out.println(" ");
-        System.out.println("Hello, " + name + "!");
+        System.out.println("Hello, " + YELLOW_UNDERLINED + YELLOW_BOLD + name + RESET + "!");
         System.out.println(" ");
-        System.out.println("Did you know that the value of PI is approximately " + PI + "?");
     }
 
 }
