@@ -3,27 +3,28 @@ import java.util.Scanner;
 public class CylinderApp {
     public static void main(String[] args) {
         double radius, height, surfaceArea, volume;
-        radius = userRadius();
-        height = userHight();
+        radius = userInputRadius();
+        height = userInputHeight();
         Cylinder cylinder = new Cylinder(radius, height);
         surfaceArea = cylinder.surfaceArea();
         volume = cylinder.volume();
         displayResults(radius, height, surfaceArea, volume);
     }
 
-    public static double userRadius() {
+    public static double userInputRadius() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the radius of the cylinder you would like to calculate: ");
         double r = scanner.nextDouble();
+        System.out.println("");
         return r;
     }
 
-    public static double userHight() {
+    public static double userInputHeight() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the height of the cylinder you would like to calculate: ");
         double h = scanner.nextDouble();
-        System.out.println("");
         scanner.close();
+        System.out.println("");
         return h;
     }
 
