@@ -1,15 +1,15 @@
 import java.util.ArrayList;
 
 public class Dealer {
-
     public static void main(String[] args) {
         ArrayList<String> hand = new ArrayList<>(); // prevents duplicates to mirror 54 card deck
         for (int i = 0; i < 5; i++) {
-            boolean j = true;
-            boolean jokerCheck = Joker(j);
-            if (jokerCheck == true) {
+            int c = i + 1; // card counter
+            System.out.print(c + ". ");
+            int jokerCheck = (int) (Math.random() *  (54 - hand.size()));
+            if (jokerCheck == 1) {
                 System.out.println("Dealt card: Joker");
-            } else if (jokerCheck == false) {
+            } else if (jokerCheck != 1) {
                 Card card = new Card();
                 String newCard = card.Deck(card.suit, card.rank);
                 if (hand.contains(newCard) == true) {
@@ -20,25 +20,6 @@ public class Dealer {
                     hand.add(newCard);
                 }
             }
-        }
-    }
-
-    public static boolean Joker(boolean j) { // 3. Volume (v)
-        int i = 0; // jokers pulled
-        int d = 54;
-        if (i < 2) {
-            int jokerChance = (int) (Math.random() * d);
-            if (jokerChance == 1) {
-                i++;
-                j = true;
-                return j;
-            } else {
-                j = false;
-                return j;
-            }
-        } else { // All jokers pulled
-            j = false;
-            return j;
         }
     }
 }
