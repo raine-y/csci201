@@ -4,6 +4,8 @@ public class Lights {
         Bulb bulb2 = new Bulb();
         bulb1.turnOn();
         bulb2.turnOff();
+        bulb1.isBulbOn();
+        bulb2.isBulbOn();
     }
 }
 
