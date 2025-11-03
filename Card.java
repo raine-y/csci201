@@ -10,6 +10,5 @@ public class Card {
         this.suit = suits[suitIndex];
         this.rank = ranks[rankIndex];
         return this.rank + " of " + this.suit;
-        // return "joker" + " ";
     }
 }
