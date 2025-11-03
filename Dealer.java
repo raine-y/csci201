@@ -7,7 +7,13 @@ public class Dealer {
             ArrayList<String> hand = new ArrayList<>();
             String latestCard = card.Deck(card.suit, card.rank);
             hand.add(latestCard);
-            System.out.println("Dealt card: " + latestCard);
+            if (latestCard.equals(hand) ) {
+                i--;
+                continue;
+            } else {
+                System.out.println("Dealt card: " + latestCard);
+            }
+
         }
     }
 }
