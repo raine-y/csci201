@@ -15,6 +15,7 @@ public class CylinderApp {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the radius of the cylinder you would like to calculate: ");
         double r = scanner.nextDouble();
+        scanner.close();
         System.out.println("");
         return r;
     }
