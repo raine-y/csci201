@@ -1,6 +1,4 @@
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.IntStream;
 
 public class Assignment17 {
 
@@ -13,10 +11,12 @@ public class Assignment17 {
 
     private static int search(int[] array, int key) {
         // Your code starts here
-            return IntStream.range(0, array.length)
-                    .filter(i -> array[i] == key)
-                    .findFirst()
-                    .orElse(-1);
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == key) {
+                return i;
+            }
+        }
+        return -1;
         // Your code ends her
     }
 
@@ -42,11 +42,3 @@ public class Assignment17 {
     }
 
 }
-
-/*
- * OUTPUT:
- * 
- * Max[4, 6, 8, 0, 2] = 8
- * 7 is NOT in [4, 6, 8, 0, 2]
- * 8 is at index 2 in [4, 6, 8, 0, 2]
- */
