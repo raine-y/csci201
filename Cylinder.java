@@ -2,14 +2,25 @@ public class Cylinder extends SolidCircularObject {
     
     // attributes 
 
+    private double height;
     private double volume;
     private double surfaceArea;
     
     // constructor
 
-    public Cylinder(double radius, double height) {
-        super(radius, height);
+    public Cylinder(double radius) {
+        super(radius);
+    }
 
+    public Cylinder(double radius, double height) {
+        super(radius);
+        this.height = height;
+    }
+
+    // getter 
+
+    public double height() {
+        return height;
     }
 
     // operations

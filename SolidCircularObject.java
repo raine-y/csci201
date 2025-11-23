@@ -4,7 +4,6 @@ public class SolidCircularObject {
 
     private final double PI = Math.PI;
     private double radius;
-    private double height;
 
     // getter(s) 
 
@@ -16,23 +15,10 @@ public class SolidCircularObject {
         return radius;
     }
 
-    public double height() {
-        return height;
-    }
-
     //constructor
 
     public SolidCircularObject(double radius) {
         this.radius = radius;
     }
-
-    public SolidCircularObject(double radius, double height) {
-        this.radius = radius;
-        this.height = height;
-    }
-
-    // operations
-
-    //...
 
 }
