@@ -41,6 +41,6 @@ public class Cylinder extends SolidCircularObject {
     // toString() override
 
     public String toString() {
-        return "[Cyl] " + super.toString() + ", Hei: " + height() + ", Vol.: " + volume() + ", S. Area: " + surfaceArea();
+        return "[Cyl] " + super.toString() + ", Hei: " + height() + ", Vol.: " + formatter.format(volume()) + ", S. Area: " + formatter.format(surfaceArea());
     }
 }

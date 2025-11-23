@@ -1,4 +1,9 @@
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 public class SolidCircularObject {
+
+    NumberFormat formatter = new DecimalFormat("#0.0000");     
  
     // attribute(s)
 
