@@ -21,4 +21,10 @@ public class SolidCircularObject {
         this.radius = radius;
     }
 
+    // toString() override
+
+    public String toString() {
+        return "Rad.: " + radius();
+    }
+
 }

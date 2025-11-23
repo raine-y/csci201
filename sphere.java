@@ -26,6 +26,6 @@ public class Sphere extends SolidCircularObject {
     // toString() override
 
     public String toString() {
-        return "[Sph] " + "Rad.: " + radius() + ", Vol.: " + volume() + ", Surf. Area: " + surfaceArea();
+        return "[Sph] " + super.toString() + ", Vol.: " + volume() + ", Surf. Area: " + surfaceArea();
     }
 }
