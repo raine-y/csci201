@@ -1,28 +1,35 @@
-public class Cylinder {
-    final static double PI = Math.PI;
-    private double r; // instance attribute for radius
-    private double h; // instance attribute for height
+public class Cylinder extends SolidCircularObject {
+    
+    // attributes 
+
+    private double volume;
+    private double surfaceArea;
+    
+    // constructor
 
     public Cylinder(double radius, double height) {
-        r = radius;
-        h = height;
+        super(radius, height);
+
     }
 
-    public double radius() {
-        return r;
-    }
-
-    public double height() {
-        return h;
-    }
-
-    public double surfaceArea() {
-        double s = 2.0 * PI * r * (r + h);
-        return s;
-    }
+    // operations
 
     public double volume() {
-        double v = PI * Math.pow(r, 2) * h;
-        return v;
+        volume = pi() * Math.pow(radius(), 2) * height();
+        return volume;
+    }
+
+     public double surfaceArea() {
+        double base, top, lateral;
+        top = base = pi() * Math.pow(radius(), 2);
+        lateral = 2 * pi() * radius() * height();
+        surfaceArea = base + top + lateral;
+        return surfaceArea;
+    }
+
+    // toString() override
+
+    public String toString() {
+        return "[Cyl] " + "Rad.: " + radius() + ", Hei:" + height() + ", Vol.: " + volume() + ", S. Area: " + surfaceArea();
     }
 }

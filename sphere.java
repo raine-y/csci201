@@ -1,20 +1,31 @@
+public class Sphere extends SolidCircularObject {
 
-import java.util.Scanner;
+    // attribute(s)
 
-public class sphere {
-    public static final String ANSI_RESET = "\u001B[0m";
-    public static final String YELLOW_UNDERLINED = "\033[4;33m";
-    public static void main(String[] args){
-        final Double PI = Math.PI;
-        System.out.print("Enter the radius of your sphere: ");
-        Scanner scanner = new Scanner(System.in);
-        Double radius = scanner.nextDouble();
-        Double surfaceArea = 4.0 * PI * Math.pow(radius, 2);
-        Double volume = (4.0 / 3.0) * PI * Math.pow(radius, 3);
-        System.out.println("Radius = " + radius);
-        System.out.println("Pi = " + PI);
-        System.out.println("Surface Area = " + YELLOW_UNDERLINED + surfaceArea + ANSI_RESET);
-        System.out.println("Volume = " + YELLOW_UNDERLINED +  volume + ANSI_RESET);
-        scanner.close();
+    private double volume;
+    private double surfaceArea;
+
+    // constructor
+    
+    public Sphere(double radius) {
+        super(radius);
+    }
+
+    // operations
+
+    public double volume() {
+        volume = (4.0/3.0) * pi() * Math.pow(radius(), 3);
+        return volume;
+    }
+
+    public double surfaceArea() {
+        surfaceArea = 4 * pi() * Math.pow(radius(), 2);
+        return surfaceArea;
+    }
+
+    // toString() override
+
+    public String toString() {
+        return "[Sph] " + "Rad.: " + radius() + ", Vol.: " + volume() + ", Surf. Area: " + surfaceArea();
     }
 }
